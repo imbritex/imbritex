@@ -1,0 +1,88 @@
+body.britex-app {
+    background-color: #0c0c0c;
+    color: #d4d4d4;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+body.britex-app::-webkit-scrollbar {
+    width: 2px;
+}
+
+body.britex-app::-webkit-scrollbar-track {
+    background: #0c0c0c;
+    border-left: 1px solid #1e1e1e;
+}
+
+body.britex-app::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 2px;
+}
+
+body.britex-app::-webkit-scrollbar-thumb:hover {
+    background: #4a4a4a;
+}
+
+.britex-term {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.britex-term a {
+    color: #569cd6;
+    text-decoration: none;
+}
+
+.britex-term a:hover {
+    text-decoration: underline;
+}
+
+.britex-term__line {
+    margin: 4px 0;
+    word-wrap: break-word;
+}
+
+.britex-term__line--error {
+    color: #f44747;
+}
+
+.britex-term__input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.britex-term__prompt {
+    color: #4af626;
+    font-weight: bold;
+}
+
+.britex-term__colon, .britex-term__symbol {
+    color: #d4d4d4;
+}
+
+.britex-term__dir {
+    color: #3b8eea;
+    font-weight: bold;
+}
+
+.britex-term__symbol {
+    margin-right: 8px;
+}
+
+.britex-term__input {
+    background: transparent;
+    border: none;
+    color: #d4d4d4;
+    font-family: inherit;
+    font-size: inherit;
+    flex-grow: 1;
+    outline: none;
+    caret-color: #d4d4d4;
+}

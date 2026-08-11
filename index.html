@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Britex - Terminal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="britex-app">
+    <div class="britex-term">
+        <div class="britex-term__output" id="term-output">
+            <div class="britex-term__line">BritexOS (GNU/Linux 5.15.0-generic x86_64)</div>
+            <div class="britex-term__line">Type 'help' to see available commands.</div>
+            <br>
+        </div>
+        
+        <div class="britex-term__input-wrapper">
+            <span class="britex-term__prompt">britex@server</span><span class="britex-term__colon">:</span><span class="britex-term__dir">~</span><span class="britex-term__symbol">$</span> 
+            <input type="text" class="britex-term__input" id="term-input" autocomplete="off" autofocus>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
