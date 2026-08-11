@@ -1,41 +1,171 @@
-body.britex-app {
-    background-color: #0c0c0c;
-    color: #d4d4d4;
-    font-family: 'Courier New', Courier, monospace;
+body.win11-desktop {
     margin: 0;
-    padding: 20px;
-    font-size: 16px;
-    line-height: 1.5;
+    padding: 0;
     height: 100vh;
-    box-sizing: border-box;
-    overflow-y: auto;
+    background: radial-gradient(circle at 50% 120%, #1a3c7a 0%, #081224 50%, #000000 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-body.britex-app::-webkit-scrollbar {
-    width: 2px;
+.win11-window {
+    width: 850px;
+    height: 550px;
+    background-color: #0c0c0c;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
 }
 
-body.britex-app::-webkit-scrollbar-track {
-    background: #0c0c0c;
-    border-left: 1px solid #1e1e1e;
+.win11-titlebar {
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 12px;
+    user-select: none;
 }
 
-body.britex-app::-webkit-scrollbar-thumb {
-    background: #333333;
+.win11-titlebar__text {
+    color: #cccccc;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.win11-titlebar__icon {
+    color: #569cd6;
+    margin-right: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.win11-titlebar__controls {
+    display: flex;
+    height: 100%;
+}
+
+.win11-control {
+    width: 46px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: background-color 0.1s;
+}
+
+.win11-control:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.win11-control--close:hover {
+    background-color: #e81123;
+}
+
+.win11-control--minimize::after {
+    content: '';
+    width: 10px;
+    height: 1px;
+    background: #cccccc;
+}
+
+.win11-control--maximize::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 1px solid #cccccc;
+}
+
+.win11-control--close::after, .win11-control--close::before {
+    content: '';
+    width: 12px;
+    height: 1px;
+    background: #cccccc;
+    position: absolute;
+}
+
+.win11-control--close::after {
+    transform: rotate(45deg);
+}
+
+.win11-control--close::before {
+    transform: rotate(-45deg);
+}
+
+.win11-taskbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background-color: rgba(32, 32, 32, 0.85);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.win11-start-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.win11-start-btn:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.win11-start-icon {
+    width: 20px;
+    height: 20px;
+    background: #0078d4;
     border-radius: 2px;
-}
-
-body.britex-app::-webkit-scrollbar-thumb:hover {
-    background: #4a4a4a;
+    box-shadow: inset 0 0 0 2px #0078d4, inset 0 0 0 10px #ffffff;
 }
 
 .britex-term {
-    max-width: 800px;
-    margin: 0 auto;
+    flex-grow: 1;
+    padding: 15px;
+    font-family: 'Consolas', 'Cascadia Code', 'Courier New', monospace;
+    font-size: 15px;
+    color: #cccccc;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.britex-term::-webkit-scrollbar {
+    width: 2px;
+}
+
+.britex-term::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.britex-term::-webkit-scrollbar-thumb {
+    background: #555555;
+    border-radius: 2px;
+}
+
+.britex-term::-webkit-scrollbar-thumb:hover {
+    background: #888888;
 }
 
 .britex-term a {
-    color: #569cd6;
+    color: #3b8eea;
     text-decoration: none;
 }
 
@@ -44,45 +174,32 @@ body.britex-app::-webkit-scrollbar-thumb:hover {
 }
 
 .britex-term__line {
-    margin: 4px 0;
+    margin: 2px 0;
     word-wrap: break-word;
 }
 
 .britex-term__line--error {
-    color: #f44747;
+    color: #ff5555;
 }
 
 .britex-term__input-wrapper {
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .britex-term__prompt {
-    color: #4af626;
-    font-weight: bold;
-}
-
-.britex-term__colon, .britex-term__symbol {
-    color: #d4d4d4;
-}
-
-.britex-term__dir {
-    color: #3b8eea;
-    font-weight: bold;
-}
-
-.britex-term__symbol {
+    color: #cccccc;
     margin-right: 8px;
 }
 
 .britex-term__input {
     background: transparent;
     border: none;
-    color: #d4d4d4;
+    color: #cccccc;
     font-family: inherit;
     font-size: inherit;
     flex-grow: 1;
     outline: none;
-    caret-color: #d4d4d4;
+    caret-color: #cccccc;
 }

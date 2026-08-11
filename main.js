@@ -1,5 +1,6 @@
 const inputElement = document.getElementById('term-input');
 const outputElement = document.getElementById('term-output');
+const termContainer = document.getElementById('term-container');
 
 const commands = {
     help: [
@@ -46,6 +47,12 @@ inputElement.addEventListener('keydown', function(event) {
             commandHistory.push(cmd);
             historyIndex = commandHistory.length;
             processCommand(cmd);
+        } else {
+            const cmdHistoryDiv = document.createElement('div');
+            cmdHistoryDiv.className = 'britex-term__line';
+            cmdHistoryDiv.innerHTML = `<span class="britex-term__prompt">PS C:\\Users\\Britex&gt;</span>`;
+            outputElement.appendChild(cmdHistoryDiv);
+            scrollToBottom();
         }
     } else if (event.key === 'ArrowUp') {
         event.preventDefault();
@@ -68,7 +75,7 @@ inputElement.addEventListener('keydown', function(event) {
 function processCommand(cmd) {
     const cmdHistoryDiv = document.createElement('div');
     cmdHistoryDiv.className = 'britex-term__line';
-    cmdHistoryDiv.innerHTML = `<span class="britex-term__prompt">britex@server</span><span class="britex-term__colon">:</span><span class="britex-term__dir">~</span><span class="britex-term__symbol">$</span> ${cmd}`;
+    cmdHistoryDiv.innerHTML = `<span class="britex-term__prompt">PS C:\\Users\\Britex&gt;</span> ${cmd}`;
     outputElement.appendChild(cmdHistoryDiv);
 
     if (cmd === 'clear') {
@@ -87,13 +94,17 @@ function processCommand(cmd) {
     else {
         const errDiv = document.createElement('div');
         errDiv.className = 'britex-term__line britex-term__line--error';
-        errDiv.innerHTML = `bash: ${cmd}: command not found. Type 'help'.`;
+        errDiv.innerHTML = `${cmd} : The term '${cmd}' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.`;
         outputElement.appendChild(errDiv);
         const br = document.createElement('br');
         outputElement.appendChild(br);
     }
 
-    window.scrollTo(0, document.body.scrollHeight);
+    scrollToBottom();
+}
+
+function scrollToBottom() {
+    termContainer.scrollTop = termContainer.scrollHeight;
 }
 
 document.addEventListener('click', () => {

@@ -3,20 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Britex - Terminal</title>
+    <title>Britex - Desktop</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="britex-app">
-    <div class="britex-term">
-        <div class="britex-term__output" id="term-output">
-            <div class="britex-term__line">BritexOS (GNU/Linux 5.15.0-generic x86_64)</div>
-            <div class="britex-term__line">Type 'help' to see available commands.</div>
-            <br>
+<body class="win11-desktop">
+    <div class="win11-window">
+        <div class="win11-titlebar">
+            <div class="win11-titlebar__text">
+                <span class="win11-titlebar__icon">>_</span> Windows PowerShell
+            </div>
+            <div class="win11-titlebar__controls">
+                <div class="win11-control win11-control--minimize"></div>
+                <div class="win11-control win11-control--maximize"></div>
+                <div class="win11-control win11-control--close"></div>
+            </div>
         </div>
         
-        <div class="britex-term__input-wrapper">
-            <span class="britex-term__prompt">britex@server</span><span class="britex-term__colon">:</span><span class="britex-term__dir">~</span><span class="britex-term__symbol">$</span> 
-            <input type="text" class="britex-term__input" id="term-input" autocomplete="off" autofocus>
+        <div class="britex-term" id="term-container">
+            <div class="britex-term__output" id="term-output">
+                <div class="britex-term__line">Windows PowerShell</div>
+                <div class="britex-term__line">Copyright (C) Microsoft Corporation. All rights reserved.</div>
+                <br>
+                <div class="britex-term__line">Type 'help' to see available commands.</div>
+                <br>
+            </div>
+            
+            <div class="britex-term__input-wrapper">
+                <span class="britex-term__prompt">PS C:\Users\Britex&gt;</span> 
+                <input type="text" class="britex-term__input" id="term-input" autocomplete="off" autofocus>
+            </div>
+        </div>
+    </div>
+
+    <div class="win11-taskbar">
+        <div class="win11-start-btn">
+            <div class="win11-start-icon"></div>
         </div>
     </div>
 
