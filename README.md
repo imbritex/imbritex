@@ -9,6 +9,7 @@ I specialize in building efficient solutions using web technologies, mobile, web
 
 Connect With Me
 
+» Coffe         → [buymeacoffee.com/leivetdd](buymeacoffee.com/leivetdd)
 » YouTube       → [https://www.youtube.com/@ImBritex](https://www.youtube.com/@ImBritex)  
 » Discord       → [https://discordapp.com/users/1201423206708412420](https://discordapp.com/users/1201423206708412420)  
 » GitHub        → [https://github.com/imbritex](https://github.com/imbritex)  
