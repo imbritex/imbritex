@@ -36,8 +36,3 @@ Current Work & Projects
 Thanks for stopping by! :)
 
 Feel free to send me a message to say hi or share ideas ☕︎
-
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=imbritex&theme=radical&hide_border=true" height="170" alt="GitHub Streak" />
-</div>
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=imbritex&radius=16&theme=github-dark&area=true&order=5&hide_border=true" height="280" alt="activity graph" />
