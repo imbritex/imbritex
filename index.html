@@ -1,46 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Britex - Desktop</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="win11-desktop">
-    <div class="win11-window">
-        <div class="win11-titlebar">
-            <div class="win11-titlebar__text">
-                <span class="win11-titlebar__icon">>_</span> Windows PowerShell
-            </div>
-            <div class="win11-titlebar__controls">
-                <div class="win11-control win11-control--minimize"></div>
-                <div class="win11-control win11-control--maximize"></div>
-                <div class="win11-control win11-control--close"></div>
-            </div>
-        </div>
-        
-        <div class="britex-term" id="term-container">
-            <div class="britex-term__output" id="term-output">
-                <div class="britex-term__line">Windows PowerShell</div>
-                <div class="britex-term__line">Copyright (C) Microsoft Corporation. All rights reserved.</div>
-                <br>
-                <div class="britex-term__line">Type 'help' to see available commands.</div>
-                <br>
-            </div>
-            
-            <div class="britex-term__input-wrapper">
-                <span class="britex-term__prompt">PS C:\Users\Britex&gt;</span> 
-                <input type="text" class="britex-term__input" id="term-input" autocomplete="off" autofocus>
-            </div>
-        </div>
-    </div>
-
-    <div class="win11-taskbar">
-        <div class="win11-start-btn">
-            <div class="win11-start-icon"></div>
-        </div>
-    </div>
-
-    <script src="main.js"></script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/110420184?v=4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Britex</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
